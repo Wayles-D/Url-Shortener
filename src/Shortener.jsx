@@ -51,14 +51,14 @@ const Shortener = () => {
       <div className="max-width bg-[url('../images/bg-shorten-desktop.svg')] bg-[#3A3053] bg-no-repeat bg-cover bg-center rounded-lg shadow-md p-6 md:p-10 mb-6">
         <form
           onSubmit={handleShorten}
-          className="flex flex-col md:flex-row items-center gap-4"
+          className="flex flex-col md:flex-row items-stretch gap-4"
         >
           <input
             type="text"
             placeholder={error ? error : "Shorten a link here..."}
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            className={`w-full rounded-lg px-4 py-3 outline-none text-base bg-white md:text-lg ${
+            className={`w-full md:flex-1 rounded-lg px-4 py-3 outline-none text-base bg-white md:text-lg ${
               error
                 ? "border-2 border-red-400 placeholder-red-400"
                 : "border-none"
@@ -66,7 +66,7 @@ const Shortener = () => {
           />
           <button
             type="submit"
-            className="w-full md:w-auto bg-[#2BD1D1] text-white font-bold rounded-lg px-6 py-3 text-base md:text-lg hover:bg-[#9be3e2] transition"
+            className="w-full md:w-auto h-full bg-[#2BD1D1] text-white font-bold rounded-lg px-6 py-3 text-base md:text-lg hover:bg-[#9be3e2] transition"
           >
             Shorten It!
           </button>
