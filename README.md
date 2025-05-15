@@ -18,12 +18,5 @@ This is a responsive URL shortening application built using HTML, CSS (Tailwind)
 - React.Js
 - Clean URI API
 
-## 📦 How to Use
 
-1. Clone or download the repository.
-2. Open `index.html` in your browser.
-3. Paste any valid URL and click the shorten button.
-4. Enjoy your clean, copy-ready link!
-
-## 📂 Folder Structure
 
