@@ -14,13 +14,13 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex gap-x-10 text-gray-400 font-medium">
             <li>
-              <button className="hover:text-gray-700 transition">Features</button>
+              <button className="hover:text-gray-700 poppins font bold transition">Features</button>
             </li>
             <li>
-              <button className="hover:text-gray-700 transition">Pricing</button>
+              <button className="hover:text-gray-700 poppins font bold transition">Pricing</button>
             </li>
             <li>
-              <button className="hover:text-gray-700 transition">Resources</button>
+              <button className="hover:text-gray-700 poppins font bold transition">Resources</button>
             </li>
           </ul>
         </nav>
@@ -29,7 +29,7 @@ const Header = () => {
       {/* Right section: auth buttons (desktop) */}
       <ul className="hidden md:flex items-center gap-x-8 text-gray-400 font-medium">
         <li>
-          <button className="hover:text-gray-700 transition">Login</button>
+          <button className="hover:text-gray-700 poppins font bold transition">Login</button>
         </li>
         <li>
           <button className="rounded-full h-8 px-6 bg-[#2BD1D1] text-white font-bold hover:bg-[#9be3e2] transition">
@@ -38,7 +38,7 @@ const Header = () => {
         </li>
       </ul>
 
-      {/* Hamburger menu icon (mobile only) */}
+      {/* Hamburger menu icon (on mobile) */}
       <div className="md:hidden">
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -73,9 +73,9 @@ const Header = () => {
       {/* Mobile menu dropdown */}
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white shadow-md mt-2 p-6 flex flex-col gap-4 text-center text-gray-600 z-50 md:hidden">
-          <button className="hover:text-gray-900">Features</button>
-          <button className="hover:text-gray-900">Pricing</button>
-          <button className="hover:text-gray-900">Resources</button>
+          <button className="hover:text-gray-900 poppins font bold">Features</button>
+          <button className="hover:text-gray-900 poppins font bold">Pricing</button>
+          <button className="hover:text-gray-900 poppins font bold">Resources</button>
           <hr className="my-2" />
           <button className="hover:text-gray-900">Login</button>
           <button className="bg-[#2BD1D1] text-white py-2 rounded-full font-bold hover:bg-[#9be3e2]">
