@@ -33,7 +33,7 @@ const Advance = () => {
                 <img src={brand} alt="icon" />
               </div>
               <h3 className="text-lg poppins-bold mt-5">Brand Recognition</h3>
-              <p className="text-[#A7A4AA] poppins mt-3">
+              <p className="text-[#A7A4AA] poppins text-md mt-3">
                 Boost your brand recognition with each click. Generic links
                 don't mean a thing. Branded links help instil confidence in your
                 content.
@@ -45,7 +45,7 @@ const Advance = () => {
                 <img src={detailed} alt="icon" />
               </div>
               <h3 className="text-lg poppins-bold mt-5">Detailed Records</h3>
-              <p className="text-[#A7A4AA] poppins mt-3">
+              <p className="text-[#A7A4AA] poppins text-md mt-3">
                 Gain insights into who is clicking your links. Knowing when and
                 where people engage with your content helps inform better
                 decisions.
@@ -57,7 +57,7 @@ const Advance = () => {
                 <img src={customizable} alt="icon" />
               </div>
               <h3 className="text-lg poppins-bold mt-3 lg:mt-5">Fully Customizable</h3>
-              <p className="text-[#A7A4AA] poppins mt-3">
+              <p className="text-[#A7A4AA] poppins text-md mt-3">
                 Improve brand awareness and content discoverability through
                 customizable links, supercharging audience engagement.
               </p>
