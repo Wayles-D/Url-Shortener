@@ -98,9 +98,9 @@ const Shortener = () => {
   };
 
   return (
-    <div className="max-w-xs sm:max-w-md md:max-w-2xl mx-auto px-2">
+    <div className="max-width mx-auto px-2">
       {/* ✅ Input Box */}
-      <div className="max-w-xs sm:max-w-md md:max-w-2xl mx-auto bg-[url('../images/bg-shorten-desktop.svg')] bg-[#3A3053] bg-no-repeat bg-cover bg-center rounded-lg shadow-md p-6 md:p-10 mb-6">
+      <div className="max-width bg-[url('../images/bg-shorten-desktop.svg')] bg-[#3A3053] bg-no-repeat bg-cover bg-center rounded-lg shadow-md p-6 md:p-10 mb-6">
         <form
           onSubmit={handleShorten}
           className="flex flex-col md:flex-row items-stretch gap-4"
