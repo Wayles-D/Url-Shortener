@@ -6,7 +6,7 @@ const Advance = () => {
   return (
     <>
       <section className="bg-gray-100 py-10 lg:py-20">
-        <div className="max-width">
+        <div className="max-w-xs sm:max-w-md md:max-w-2xl mx-auto">
           <div>
             <h2 className="text-2xl md:text-4xl text-center poppins-bold">
               Advanced Statistics
