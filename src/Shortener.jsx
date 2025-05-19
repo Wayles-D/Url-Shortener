@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 const LOCAL_STORAGE_KEY = "shortenedLinks";
 
-// ✅ URL Validation
 const isValidUrl = (url) => {
   try {
     const pattern = /^(https?:\/\/|www\.)[^\s/$.?#].[^\s]*$/i;
@@ -17,7 +16,6 @@ const Shortener = () => {
   const [error, setError] = useState("");
   const [links, setLinks] = useState([]);
 
-  // ✅ Load saved links on mount
   useEffect(() => {
     try {
       const stored = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -30,13 +28,12 @@ const Shortener = () => {
     }
   }, []);
 
-  // ✅ Save links whenever updated
   useEffect(() => {
     try {
       if (links.length > 0) {
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(links));
       } else {
-        localStorage.removeItem(LOCAL_STORAGE_KEY); // Optional cleanup
+        localStorage.removeItem(LOCAL_STORAGE_KEY);
       }
     } catch (err) {
       console.error("Error writing to localStorage:", err);
@@ -98,12 +95,12 @@ const Shortener = () => {
   };
 
   return (
-    <div className="max-width mx-auto px-2">
-      {/* ✅ Input Box */}
-      <div className="max-width bg-[url('../images/bg-shorten-desktop.svg')] bg-[#3A3053] bg-no-repeat bg-cover bg-center rounded-lg shadow-md p-6 md:p-10 mb-6">
+    <div className="max-width mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ✅ Shorten Box */}
+      <div className="bg-[url('../images/bg-shorten-desktop.svg')] bg-[#3A3053] bg-no-repeat bg-cover bg-center rounded-xl shadow-md p-6 sm:p-8 md:p-10 -mt-2 lg:-mt-10 z-10 relative">
         <form
           onSubmit={handleShorten}
-          className="flex flex-col md:flex-row items-stretch gap-4"
+          className="flex flex-col md:flex-row items-stretch md:items-center gap-4"
         >
           <input
             type="text"
@@ -124,14 +121,13 @@ const Shortener = () => {
             Shorten It!
           </button>
         </form>
-        {/* ✅ Error Message BELOW input */}
         {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
       </div>
 
-      {/* ✅ Shortened Links History */}
+      {/* ✅ Link History */}
       {links.length > 0 && (
-        <div className="mt-6 flex flex-col gap-6">
-          <div className="flex justify-end mb-2">
+        <div className="mt-10 flex flex-col gap-6">
+          <div className="flex justify-end">
             <button
               onClick={handleClear}
               className="bg-red-400 text-white px-4 py-2 rounded-lg font-bold hover:bg-red-500 transition"
@@ -142,9 +138,9 @@ const Shortener = () => {
           {links.map((link, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-4 flex flex-col md:flex-row md:items-center md:justify-between shadow"
+              className="bg-white rounded-lg p-4 flex flex-col md:flex-row md:items-center md:justify-between shadow-md"
             >
-              <div className="mb-2 md:mb-0 break-all text-gray-700">
+              <div className="mb-2 md:mb-0 break-all text-gray-800 text-sm md:text-base">
                 {link.original}
               </div>
               <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4">
@@ -152,13 +148,13 @@ const Shortener = () => {
                   href={link.short}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#2BD1D1] break-all"
+                  className="text-[#2BD1D1] text-sm md:text-base break-all"
                 >
                   {link.short}
                 </a>
                 <button
                   onClick={() => handleCopy(idx)}
-                  className={`rounded-lg px-6 py-2 font-bold transition ${
+                  className={`rounded-lg px-6 py-2 font-bold transition text-sm md:text-base ${
                     link.copied
                       ? "bg-[#3b3054] text-white"
                       : "bg-[#2BD1D1] text-white hover:bg-[#9be3e2]"
