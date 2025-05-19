@@ -28,7 +28,7 @@ const Advance = () => {
            
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-2 bg-[#2ACFCF] z-0"></div>
 
-            <article className="relative z-10 bg-white rounded-lg shadow-lg p-5 text-center md:text-left flex flex-col items-center md:items-start lg:mb-5 ">
+            <article className="relative z-10 bg-white rounded-lg shadow-lg p-5 text-center md:text-left flex flex-col items-center md:items-start lg:mb-5 max-w-sm w-full">
               <div className="p-5 -mt-12 w-16 h-16 bg-[#3B2F55] rounded-full flex items-center justify-center">
                 <img src={brand} alt="icon" />
               </div>
@@ -40,7 +40,7 @@ const Advance = () => {
               </p>
             </article>
 
-            <article className="relative z-10 bg-white rounded-lg shadow-lg p-5 text-center md:text-left flex flex-col items-center md:items-start lg:mt-10 w-full">
+            <article className="relative z-10 bg-white rounded-lg shadow-lg p-5 text-center md:text-left flex flex-col items-center md:items-start lg:mt-10 max-w-sm w-full">
               <div className="p-5 -mt-12 w-16 h-16 bg-[#3B2F55] rounded-full flex items-center justify-center">
                 <img src={detailed} alt="icon" />
               </div>
@@ -52,7 +52,7 @@ const Advance = () => {
               </p>
             </article>
 
-            <article className="relative z-10 bg-white rounded-lg shadow-lg p-5 text-center md:text-left flex flex-col items-center md:items-start lg:mt-20">
+            <article className="relative z-10 bg-white rounded-lg shadow-lg p-5 text-center md:text-left flex flex-col items-center md:items-start lg:mt-20 max-w-sm w-full">
               <div className="p-5 -mt-12 w-16 h-16 bg-[#3B2F55] rounded-full flex items-center justify-center">
                 <img src={customizable} alt="icon" />
               </div>
