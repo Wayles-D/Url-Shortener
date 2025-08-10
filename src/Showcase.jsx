@@ -2,7 +2,7 @@ import illustration from "../images/illustration-working.svg";
 
 const Showcase = () => {
   return (
-    <section className="max-w-[1200px] w-full mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between py-12 md:py-24">
+    <section className="max-width w-full mx-auto px-6 md:px-12 flex flex-col-reverse md:flex-row items-center justify-between py-12 md:py-24">
       
       {/* Left: Text */}
       <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
